@@ -12,9 +12,9 @@ yapıştırın. Çalışmasının sonuçları konsolda görüntülenecektir.
 */
 
 const getTotalBalanceByGender = (users, gender) => {
-  return users.reduce((total, user) => {
-    return users.gender === gender ? total + user.balance : total;
-  }, 0);
+  return users
+    .filter((user) => user.gender === gender) // önce filtrele
+    .reduce((total, user) => total + user.balance, 0); // sonra topla
 };
 
 const allUsers = [
