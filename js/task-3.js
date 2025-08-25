@@ -9,7 +9,7 @@ Konsol, çalışmanın sonuçlarını gösterecektir.
 */
 
 const sortByDescendingFriendCount = (users) => {
-  return [...users].toSort((a, b) => b.friends.length - a.friends.length);
+  return [...users].toSorted((a, b) => b.friends.length - a.friends.length);
 };
 
 console.log(
